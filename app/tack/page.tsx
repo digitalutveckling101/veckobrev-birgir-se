@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 
 export const metadata: Metadata = {
@@ -12,7 +11,6 @@ export const metadata: Metadata = {
 export default function TackPage() {
   return (
     <>
-      <Header />
       <main>
         <section className="section bg-cream-100">
           <div className="container-narrow text-center">

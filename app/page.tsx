@@ -1,4 +1,3 @@
-import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { WhatYouGet } from "./components/WhatYouGet";
 import { FormSection } from "./components/FormSection";
@@ -9,7 +8,6 @@ import { Footer } from "./components/Footer";
 export default function Home() {
   return (
     <>
-      <Header />
       <main>
         <Hero />
         <WhatYouGet />
