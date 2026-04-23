@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream-50: #FBF8F1;
+  --color-cream-100: #F5EFE2;
+  --color-cream-200: #ECE3CE;
+  --color-cream-300: #DED0AE;
+
+  --color-ink-900: #1A1713;
+  --color-ink-800: #2A2520;
+  --color-ink-700: #3D362E;
+  --color-ink-500: #6B5F52;
+  --color-ink-400: #8A7D6E;
+  --color-ink-300: #B8AD9E;
+  --color-ink-200: #D9D0BE;
+
+  --color-amber-50: #FBEEE1;
+  --color-amber-100: #F5D7BF;
+  --color-amber-400: #E69068;
+  --color-amber-500: #D97742;
+  --color-amber-600: #C66A2E;
+  --color-amber-700: #A25B2A;
+
+  --color-plum-700: #3B1D1A;
+
+  --font-serif: var(--font-source-serif), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --shadow-sm: 0 1px 2px rgba(26, 23, 19, 0.06), 0 1px 1px rgba(26, 23, 19, 0.04);
+  --shadow-md: 0 4px 16px rgba(26, 23, 19, 0.08), 0 2px 4px rgba(26, 23, 19, 0.04);
+  --shadow-lg: 0 20px 60px rgba(26, 23, 19, 0.12), 0 8px 20px rgba(26, 23, 19, 0.06);
+  --shadow-amber: 0 10px 30px -8px rgba(198, 106, 46, 0.55);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream-100);
+  color: var(--color-ink-900);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.serif-italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-amber-700);
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-amber-700);
+}
+
+@media (min-width: 720px) {
+  .eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.18em;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 14px 22px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+
+.btn-lg {
+  font-size: 16px;
+  padding: 18px 28px;
+}
+
+.btn-primary {
+  background: var(--color-ink-900);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--color-ink-800);
+}
+
+.btn-amber {
+  background: var(--color-amber-600);
+  color: #fff;
+  box-shadow: var(--shadow-amber);
+}
+.btn-amber:hover {
+  background: var(--color-amber-700);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-ink-900);
+  border: 1px solid var(--color-ink-200);
+}
+.btn-ghost:hover {
+  background: var(--color-cream-50);
+}
+
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-ink-200);
+  background: #fff;
+  font: inherit;
+  color: var(--color-ink-900);
+}
+.input:focus {
+  outline: none;
+  border-color: var(--color-amber-600);
+  box-shadow: 0 0 0 3px rgba(198, 106, 46, 0.15);
+}
+
+.container-wide {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.container-narrow {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+@media (max-width: 720px) {
+  .container-wide,
+  .container-narrow {
+    padding: 0 22px;
+  }
+}
+
+.section {
+  padding: 96px 0;
+}
+
+@media (max-width: 720px) {
+  .section {
+    padding: 64px 0;
+  }
+}

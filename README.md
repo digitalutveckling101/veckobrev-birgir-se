@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# veckobrev.birgir.se
 
-## Getting Started
+Landningssida för Birgir Birgissons veckobrev om AI, etik och vibe coding.
 
-First, run the development server:
+## Stack
+
+- Next.js 16 (App Router) + TypeScript
+- Tailwind CSS v4
+- Vercel Analytics
+- MailerLite via serverside API-route
+- Hosting: Vercel
+
+## Kom igång lokalt
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Öppna http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Miljövariabler
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Namn                 | Beskrivning                                                    |
+|----------------------|----------------------------------------------------------------|
+| `MAILERLITE_API_KEY` | Bearer-token för MailerLite Connect API (obligatorisk i prod). |
 
-## Learn More
+Kopiera `.env.example` till `.env.local` för lokal utveckling.
 
-To learn more about Next.js, take a look at the following resources:
+## Viktigt
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+MailerLite group-ID ligger som konstant i `app/api/subscribe/route.ts`. Byt ut `REPLACE_WITH_GROUP_ID` mot rätt ID innan deploy.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Designsystem
 
-## Deploy on Vercel
+Följer Birgirs gemensamma BRAND.md:
+https://github.com/digitalutveckling101/birgir-design-system
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Push till `main` i [digitalutveckling101/veckobrev-birgir-se](https://github.com/digitalutveckling101/veckobrev-birgir-se). Vercel bygger automatiskt. Domänen `veckobrev.birgir.se` kopplas under Vercel Settings → Domains.
