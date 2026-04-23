@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const MAILERLITE_GROUP_ID = "REPLACE_WITH_GROUP_ID";
+const MAILERLITE_GROUP_ID = "185555629356615647";
 const MAILERLITE_ENDPOINT = "https://connect.mailerlite.com/api/subscribers";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -45,14 +45,6 @@ export async function POST(request: Request) {
   const apiKey = process.env.MAILERLITE_API_KEY;
   if (!apiKey) {
     console.error("MAILERLITE_API_KEY saknas i miljön.");
-    return NextResponse.json(
-      { error: "Servern är inte konfigurerad. Försök igen senare." },
-      { status: 500 }
-    );
-  }
-
-  if (MAILERLITE_GROUP_ID === "REPLACE_WITH_GROUP_ID") {
-    console.error("MailerLite group ID är inte satt.");
     return NextResponse.json(
       { error: "Servern är inte konfigurerad. Försök igen senare." },
       { status: 500 }
