@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { track } from "@vercel/analytics";
 
 export function SignupForm() {
   const router = useRouter();
@@ -44,6 +45,7 @@ export function SignupForm() {
         setLoading(false);
         return;
       }
+      track("signup");
       router.push("/tack");
     } catch {
       setError("Något gick fel när vi försökte registrera dig. Försök igen om en stund.");
