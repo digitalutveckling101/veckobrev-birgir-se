@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const MAILERLITE_GROUP_ID = "185555629356615647";
+const MAILERLITE_GROUP_ID = "185432097033290878";
 const MAILERLITE_ENDPOINT = "https://connect.mailerlite.com/api/subscribers";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
